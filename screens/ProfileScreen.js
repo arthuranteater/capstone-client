@@ -13,12 +13,20 @@ export default class ProfileScreen extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            username: ''
+            username: '',
+            petname: '',
+            latitude: 39.7392,
+            longitude: -104.9903,
+            latitudeDelta: 0.0010,
+            longitudeDelta: 0.0007,
+
         }
     }
-    static navigationOptions = {
-        header: null,
-    };
+    static navigationOptions = ({ navigation }) => {
+        return {
+            title: navigation.getParam('otherParam'),
+        }
+    }
 
     render() {
         return (

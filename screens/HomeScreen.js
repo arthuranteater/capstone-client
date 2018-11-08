@@ -4,7 +4,8 @@ import {
     StyleSheet,
     TextInput,
     View,
-    Button
+    Button,
+    Text
 } from 'react-native';
 
 
@@ -13,12 +14,19 @@ export default class HomeScreen extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            username: ''
+            username: '',
+            petname: '',
+            latitude: 39.7392,
+            longitude: -104.9903,
+            latitudeDelta: 0.0010,
+            longitudeDelta: 0.0007,
+
         }
     }
     static navigationOptions = {
         header: null,
-    };
+    }
+
 
     render() {
         return (
@@ -32,12 +40,16 @@ export default class HomeScreen extends React.Component {
                         placeholder="Username"
                         placeholderTextColor="white"
                         textAlign={'center'}
-                        onChangeText={(username) => this.setState({ username })}
+                        value={this.state.username}
+                        onChange={(e) => { this.setState({ username: e.target.value }) }}
                     />
                 </View>
                 <Button style={{ height: 60, width: 100 }} color="red"
                     title="Login"
-                    onPress={() => this.props.navigation.navigate('Profile')}
+                    onPress={() => {
+                        this.props.navigation.setParams({ otherParam: this.state.username })
+                        this.props.navigation.navigate('Profile')
+                    }}
                 />
             </View>
         );
