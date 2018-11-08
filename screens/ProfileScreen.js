@@ -15,8 +15,8 @@ export default class ProfileScreen extends React.Component {
         this.state = {
             username: '',
             petname: '',
-            latitude: 39.7392,
-            longitude: -104.9903,
+            latitude: 39.755191,
+            longitude: -105.005931,
             latitudeDelta: 0.0010,
             longitudeDelta: 0.0007,
 

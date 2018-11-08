@@ -9,24 +9,34 @@ export default class MapScreen extends React.Component {
         this.state = {
             username: '',
             petname: '',
-            latitude: 39.7392,
-            longitude: -104.9903,
-            latitudeDelta: 0.0010,
-            longitudeDelta: 0.0007,
+            latitude: 39.755191,
+            longitude: -105.005931,
+            latitudeDelta: 0.0020,
+            longitudeDelta: 0.0014,
 
         }
     }
 
+    handleZoom = () => {
+
+    }
+
+
+
+    moveLat = () => {
+        setInterval(() => {
+            let newLat = this.state.latitude + .0000004
+            this.setState({ latitude: newLat })
+        }, 500);
+    }
+
+
     render() {
         const { region } = this.props;
         console.log(region);
-
-        handleZoom = () => {
-
-        }
-
+        this.moveLat()
         return (
-            <View style={styles.container}>
+            <View style={styles.container} >
                 <MapView
                     provider={PROVIDER_GOOGLE}
                     style={styles.map}
@@ -37,14 +47,13 @@ export default class MapScreen extends React.Component {
                         longitudeDelta: this.state.longitudeDelta,
                     }}
                 >
-                    <Marker
-                        LatLng={
+                    <MapView.Marker
+                        coordinate={{
                             latitude: this.state.latitude,
-                    longitude: this.state.longitude,
-                    }
-                        coordinate={marker.latlng}
-                    title={marker.title}
-                    description={marker.description}
+                            longitude: this.state.longitude
+                        }}
+                        title={this.state.petname}
+                        description={"description"}
                     />
                 </MapView>
                 <View style={{ position: "absolute", flexDirection: "row" }}>
@@ -71,6 +80,7 @@ export default class MapScreen extends React.Component {
         );
     }
 }
+
 
 
 const styles = StyleSheet.create({
