@@ -13,10 +13,10 @@ export default class MapScreen extends React.Component {
                     provider={PROVIDER_GOOGLE}
                     style={styles.map}
                     region={{
-                        latitude: 37.78825,
-                        longitude: -122.4324,
-                        latitudeDelta: 0.015,
-                        longitudeDelta: 0.0121,
+                        latitude: 39.7392,
+                        longitude: -104.9903,
+                        latitudeDelta: 0.0010,
+                        longitudeDelta: 0.0007,
                     }}
                 >
                 </MapView>
@@ -29,8 +29,8 @@ export default class MapScreen extends React.Component {
 const styles = StyleSheet.create({
     container: {
         ...StyleSheet.absoluteFillObject,
-        height: 400,
-        width: 400,
+        height: '100%',
+        width: '100%',
         justifyContent: 'flex-end',
         alignItems: 'center',
     },
