@@ -9,7 +9,7 @@ import {
 
 
 
-export default class HomeScreen extends React.Component {
+export default class ProfileScreen extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -78,28 +78,6 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: 'black',
-    },
-    developmentModeText: {
-        marginBottom: 20,
-        color: 'rgba(0,0,0,0.4)',
-        fontSize: 14,
-        lineHeight: 19,
-        textAlign: 'center',
-    },
-    contentContainer: {
-        paddingTop: 30,
-    },
-    welcomeContainer: {
-        alignItems: 'center',
-        marginTop: 10,
-        marginBottom: 20,
-    },
-    welcomeImage: {
-        width: 400,
-        height: 400,
-        resizeMode: 'contain',
-        marginTop: 3,
-        marginLeft: -10,
     },
     input: {
         marginTop: 30, marginBottom: 20, fontSize: 20, height: 40, width: 200, backgroundColor: 'white', borderBottomColor: '#000080', borderBottomWidth: 1

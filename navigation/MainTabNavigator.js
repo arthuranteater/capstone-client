@@ -16,8 +16,8 @@ HomeStack.navigationOptions = {
     tabBarLabel: 'Profile',
     tabBarIcon: ({ focused }) => (
         <Icon
-            name='dog'
-            type='material-community'
+            name='user'
+            type='font-awesome'
             color='red'
         />
     ),
