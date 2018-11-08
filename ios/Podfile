@@ -1,5 +1,7 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+source 'https://github.com/CocoaPods/Specs.git'
+
+platform :ios, '9.0'
 
 target 'g' do
     rn_path = '../node_modules/react-native'
@@ -21,6 +23,7 @@ target 'g' do
       'RCTText',
       'RCTVibration',
       'RCTWebSocket',
+      'DevSupport'
     ]
   
     # React Native third party dependencies podspecs
@@ -37,6 +40,8 @@ target 'g' do
     pod 'react-native-google-maps', path: rn_maps_path  # Unomment this line if you want to support GoogleMaps on iOS
     pod 'GoogleMaps'  # Uncomment this line if you want to support GoogleMaps on iOS
     pod 'Google-Maps-iOS-Utils' # Uncomment this line if you want to support GoogleMaps on iOS
+    pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+
   end
   
   post_install do |installer|
