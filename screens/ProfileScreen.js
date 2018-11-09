@@ -14,7 +14,10 @@ export default class ProfileScreen extends React.Component {
         super(props)
         this.state = {
             username: '',
+            email: '',
+            password: '',
             petname: '',
+            key: '',
             latitude: 39.755191,
             longitude: -105.005931,
             latitudeDelta: 0.0010,
@@ -36,7 +39,8 @@ export default class ProfileScreen extends React.Component {
                         style={styles.input}
                         placeholder="  Email"
                         placeholderTextColor="grey"
-                        onChangeText={(username) => this.setState({ username })}
+                        value={this.state.email}
+                        onChange={(e) => { this.setState({ email: e.target.value }) }}
                     />
                 </View>
                 <View>
@@ -44,7 +48,8 @@ export default class ProfileScreen extends React.Component {
                         style={styles.input}
                         placeholder="  Password"
                         placeholderTextColor="grey"
-                        onChangeText={(username) => this.setState({ username })}
+                        value={this.state.password}
+                        onChange={(e) => { this.setState({ password: e.target.value }) }}
                     />
                 </View>
                 <View>
@@ -52,7 +57,9 @@ export default class ProfileScreen extends React.Component {
                         style={styles.input}
                         placeholder="  Pet Name"
                         placeholderTextColor="grey"
-                        onChangeText={(username) => this.setState({ username })}
+                        value={this.state.petname}
+                        onChange={(e) => { this.setState({ petname: e.target.value }) }}
+
                     />
                 </View>
                 <View style={{ marginBottom: 30 }}>
@@ -60,7 +67,8 @@ export default class ProfileScreen extends React.Component {
                         style={styles.input}
                         placeholder="  Activation Key"
                         placeholderTextColor="grey"
-                        onChangeText={(username) => this.setState({ username })}
+                        value={this.state.key}
+                        onChange={(e) => { this.setState({ key: e.target.value }) }}
                     />
                 </View>
                 <View style={{ marginBottom: 100, backgroundColor: '#000080', borderRadius: 100, borderWidth: 2, borderColor: '#000080' }}>
