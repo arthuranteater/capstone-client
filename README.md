@@ -1,7 +1,6 @@
 # capstone-client
 Garf - mobile app - React Native, Xcode, Google Maps
 
-<h2 style="text-align: center">Garf</h2>
 
 <p align="center">
 <img src="https://arthuranteater.com/static/blink3.5c880839.gif" alt="Garf logo">
