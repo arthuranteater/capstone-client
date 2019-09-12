@@ -1,6 +1,8 @@
 # capstone-client
 Garf - mobile app - React Native, Xcode, Google Maps
 
+<img src="https://arthuranteater.com/static/blink3.5c880839.gif" alt="Garf logo">
+
 Mobile application that works with an Android or Iphone where users can create a profile and track their pets using a real-time GPS tracking system. The GPS collar, built with a Raspberry Pi, sends coordinates to the mobile application which displays the real-time location of the pet using Google maps.
 
 
@@ -9,7 +11,7 @@ Mobile application that works with an Android or Iphone where users can create a
 <a href="https://www.youtube.com/watch?v=pujCyFdVZzk" target="_blank">Play Demo video in new tab!</a>
 
 
-Steps to recreate:
+Steps to recreate frontend:
 
 Clone repo
 Download <a href="https://apps.apple.com/us/app/xcode/id497799835?mt=12" target="_blank">Xcode</a>
@@ -21,3 +23,9 @@ https://medium.com/@samil.mehdiyev/integrating-google-maps-in-react-native-app-o
 Or
 
 https://codeburst.io/react-native-google-map-with-react-native-maps-572e3d3eee14
+
+Steps to recreate backend:
+
+https://arthuranteater.com/raspberry-pi-gps/
+
+
